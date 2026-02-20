@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace Cadastro_de_Atletas
 {
     internal static class Program
     {

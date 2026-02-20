@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1
+﻿namespace Cadastro_de_Atletas
 {
     partial class Form1
     {
@@ -32,30 +32,31 @@
             Cadastro = new TabPage();
             Cadastrar = new Button();
             panel3 = new Panel();
-            maskedTextBox1 = new MaskedTextBox();
-            comboBox2 = new ComboBox();
+            Altura = new Label();
+            Peso = new Label();
+            TipoSanguíneo = new Label();
+            txtaltura = new MaskedTextBox();
+            txtpeso = new MaskedTextBox();
+            txtsangue = new ComboBox();
             Alergias = new Label();
-            textBox4 = new TextBox();
+            txtalergia = new TextBox();
             panel2 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
+            txtdata = new DateTimePicker();
             Datadenascimento = new Label();
             Modalidade = new Label();
             Genero = new Label();
             Nacionalidade = new Label();
             Nome = new Label();
-            comboBox1 = new ComboBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtgenero = new ComboBox();
+            txtmodalidade = new TextBox();
+            txtnacionalidade = new TextBox();
+            txtnome = new TextBox();
             Dadospessoais = new Label();
             Informaçõespessoais = new Label();
             Resultado = new TabPage();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            maskedTextBox2 = new MaskedTextBox();
-            TipoSanguíneo = new Label();
-            Peso = new Label();
-            Altura = new Label();
             dataGridView1 = new DataGridView();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            Atualizar = new Button();
             tabControl1.SuspendLayout();
             Cadastro.SuspendLayout();
             panel3.SuspendLayout();
@@ -97,37 +98,73 @@
             Cadastrar.TabIndex = 4;
             Cadastrar.Text = "Cadastrar";
             Cadastrar.UseVisualStyleBackColor = true;
+            Cadastrar.Click += Cadastrar_Click;
             // 
             // panel3
             // 
             panel3.Controls.Add(Altura);
             panel3.Controls.Add(Peso);
             panel3.Controls.Add(TipoSanguíneo);
-            panel3.Controls.Add(maskedTextBox2);
-            panel3.Controls.Add(maskedTextBox1);
-            panel3.Controls.Add(comboBox2);
+            panel3.Controls.Add(txtaltura);
+            panel3.Controls.Add(txtpeso);
+            panel3.Controls.Add(txtsangue);
             panel3.Controls.Add(Alergias);
-            panel3.Controls.Add(textBox4);
+            panel3.Controls.Add(txtalergia);
             panel3.Location = new Point(22, 217);
             panel3.Name = "panel3";
             panel3.Size = new Size(668, 250);
             panel3.TabIndex = 3;
             // 
-            // maskedTextBox1
+            // Altura
             // 
-            maskedTextBox1.Location = new Point(257, 58);
-            maskedTextBox1.Mask = "000,0";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(100, 23);
-            maskedTextBox1.TabIndex = 5;
+            Altura.AutoSize = true;
+            Altura.Location = new Point(441, 24);
+            Altura.Name = "Altura";
+            Altura.Size = new Size(39, 15);
+            Altura.TabIndex = 9;
+            Altura.Text = "Altura";
             // 
-            // comboBox2
+            // Peso
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(55, 58);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 3;
+            Peso.AutoSize = true;
+            Peso.Location = new Point(257, 24);
+            Peso.Name = "Peso";
+            Peso.Size = new Size(32, 15);
+            Peso.TabIndex = 8;
+            Peso.Text = "Peso";
+            // 
+            // TipoSanguíneo
+            // 
+            TipoSanguíneo.AutoSize = true;
+            TipoSanguíneo.Location = new Point(55, 24);
+            TipoSanguíneo.Name = "TipoSanguíneo";
+            TipoSanguíneo.Size = new Size(90, 15);
+            TipoSanguíneo.TabIndex = 7;
+            TipoSanguíneo.Text = "Tipo Sanguíneo";
+            // 
+            // txtaltura
+            // 
+            txtaltura.Location = new Point(441, 58);
+            txtaltura.Mask = "0,00";
+            txtaltura.Name = "txtaltura";
+            txtaltura.Size = new Size(100, 23);
+            txtaltura.TabIndex = 6;
+            // 
+            // txtpeso
+            // 
+            txtpeso.Location = new Point(257, 58);
+            txtpeso.Mask = "000,0";
+            txtpeso.Name = "txtpeso";
+            txtpeso.Size = new Size(100, 23);
+            txtpeso.TabIndex = 5;
+            // 
+            // txtsangue
+            // 
+            txtsangue.FormattingEnabled = true;
+            txtsangue.Location = new Point(55, 58);
+            txtsangue.Name = "txtsangue";
+            txtsangue.Size = new Size(121, 23);
+            txtsangue.TabIndex = 3;
             // 
             // Alergias
             // 
@@ -138,37 +175,37 @@
             Alergias.TabIndex = 1;
             Alergias.Text = "Alergias";
             // 
-            // textBox4
+            // txtalergia
             // 
-            textBox4.Location = new Point(55, 135);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(540, 84);
-            textBox4.TabIndex = 0;
+            txtalergia.Location = new Point(55, 135);
+            txtalergia.Multiline = true;
+            txtalergia.Name = "txtalergia";
+            txtalergia.Size = new Size(540, 84);
+            txtalergia.TabIndex = 0;
             // 
             // panel2
             // 
-            panel2.Controls.Add(dateTimePicker1);
+            panel2.Controls.Add(txtdata);
             panel2.Controls.Add(Datadenascimento);
             panel2.Controls.Add(Modalidade);
             panel2.Controls.Add(Genero);
             panel2.Controls.Add(Nacionalidade);
             panel2.Controls.Add(Nome);
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtgenero);
+            panel2.Controls.Add(txtmodalidade);
+            panel2.Controls.Add(txtnacionalidade);
+            panel2.Controls.Add(txtnome);
             panel2.Location = new Point(22, 41);
             panel2.Name = "panel2";
             panel2.Size = new Size(668, 143);
             panel2.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // txtdata
             // 
-            dateTimePicker1.Location = new Point(140, 105);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(245, 23);
-            dateTimePicker1.TabIndex = 8;
+            txtdata.Location = new Point(140, 105);
+            txtdata.Name = "txtdata";
+            txtdata.Size = new Size(245, 23);
+            txtdata.TabIndex = 8;
             // 
             // Datadenascimento
             // 
@@ -215,34 +252,34 @@
             Nome.TabIndex = 3;
             Nome.Text = "Nome";
             // 
-            // comboBox1
+            // txtgenero
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(312, 43);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 2;
+            txtgenero.FormattingEnabled = true;
+            txtgenero.Location = new Point(312, 43);
+            txtgenero.Name = "txtgenero";
+            txtgenero.Size = new Size(121, 23);
+            txtgenero.TabIndex = 2;
             // 
-            // textBox3
+            // txtmodalidade
             // 
-            textBox3.Location = new Point(495, 43);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 2;
+            txtmodalidade.Location = new Point(495, 43);
+            txtmodalidade.Name = "txtmodalidade";
+            txtmodalidade.Size = new Size(100, 23);
+            txtmodalidade.TabIndex = 2;
             // 
-            // textBox2
+            // txtnacionalidade
             // 
-            textBox2.Location = new Point(168, 43);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 1;
+            txtnacionalidade.Location = new Point(168, 43);
+            txtnacionalidade.Name = "txtnacionalidade";
+            txtnacionalidade.Size = new Size(100, 23);
+            txtnacionalidade.TabIndex = 1;
             // 
-            // textBox1
+            // txtnome
             // 
-            textBox1.Location = new Point(20, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
+            txtnome.Location = new Point(20, 43);
+            txtnome.Name = "txtnome";
+            txtnome.Size = new Size(100, 23);
+            txtnome.TabIndex = 0;
             // 
             // Dadospessoais
             // 
@@ -264,6 +301,7 @@
             // 
             // Resultado
             // 
+            Resultado.Controls.Add(Atualizar);
             Resultado.Controls.Add(dataGridView1);
             Resultado.Location = new Point(4, 24);
             Resultado.Name = "Resultado";
@@ -273,48 +311,23 @@
             Resultado.Text = "Resultado";
             Resultado.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox2
-            // 
-            maskedTextBox2.Location = new Point(441, 58);
-            maskedTextBox2.Mask = "0,00";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(100, 23);
-            maskedTextBox2.TabIndex = 6;
-            // 
-            // TipoSanguíneo
-            // 
-            TipoSanguíneo.AutoSize = true;
-            TipoSanguíneo.Location = new Point(55, 24);
-            TipoSanguíneo.Name = "TipoSanguíneo";
-            TipoSanguíneo.Size = new Size(90, 15);
-            TipoSanguíneo.TabIndex = 7;
-            TipoSanguíneo.Text = "Tipo Sanguíneo";
-            // 
-            // Peso
-            // 
-            Peso.AutoSize = true;
-            Peso.Location = new Point(257, 24);
-            Peso.Name = "Peso";
-            Peso.Size = new Size(32, 15);
-            Peso.TabIndex = 8;
-            Peso.Text = "Peso";
-            // 
-            // Altura
-            // 
-            Altura.AutoSize = true;
-            Altura.Location = new Point(441, 24);
-            Altura.Name = "Altura";
-            Altura.Size = new Size(39, 15);
-            Altura.TabIndex = 9;
-            Altura.Text = "Altura";
-            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(6, 6);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(899, 507);
+            dataGridView1.Size = new Size(899, 441);
             dataGridView1.TabIndex = 0;
+            // 
+            // Atualizar
+            // 
+            Atualizar.Location = new Point(425, 469);
+            Atualizar.Name = "Atualizar";
+            Atualizar.Size = new Size(75, 23);
+            Atualizar.TabIndex = 1;
+            Atualizar.Text = "Atualizar";
+            Atualizar.UseVisualStyleBackColor = true;
+            Atualizar.Click += Atualizar_Click;
             // 
             // Form1
             // 
@@ -345,26 +358,27 @@
         private Label Dadospessoais;
         private Label Informaçõespessoais;
         private TabPage Resultado;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtmodalidade;
+        private TextBox txtnacionalidade;
+        private TextBox txtnome;
         private Button Cadastrar;
         private Label Alergias;
-        private TextBox textBox4;
-        private ComboBox comboBox1;
+        private TextBox txtalergia;
+        private ComboBox txtgenero;
         private Label Datadenascimento;
         private Label Modalidade;
         private Label Genero;
         private Label Nacionalidade;
         private Label Nome;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private ComboBox comboBox2;
-        private DateTimePicker dateTimePicker1;
-        private MaskedTextBox maskedTextBox1;
+        private ComboBox txtsangue;
+        private DateTimePicker txtdata;
+        private MaskedTextBox txtpeso;
         private Label Altura;
         private Label Peso;
         private Label TipoSanguíneo;
-        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox txtaltura;
         private DataGridView dataGridView1;
+        private Button Atualizar;
     }
 }
